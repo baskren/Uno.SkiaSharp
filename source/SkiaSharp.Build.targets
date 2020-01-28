@@ -11,7 +11,7 @@
     <KeyFileName Condition=" '$(KeyFileName)' == '' ">mono.snk</KeyFileName>
     <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)..\$(KeyFileName)</AssemblyOriginatorKeyFile>
 
-    <GenerateAssemblyVersionInfo Condition=" '$(GenerateAssemblyVersionInfo)' == '' ">true</GenerateAssemblyVersionInfo>
+    <!--GenerateAssemblyVersionInfo Condition=" '$(GenerateAssemblyVersionInfo)' == '' ">true</GenerateAssemblyVersionInfo-->
     <AssemblyVersionGitSha Condition=" '$(AssemblyVersionGitSha)' == '' ">$(GIT_SHA)</AssemblyVersionGitSha>
     <AssemblyVersionGitSha Condition=" '$(AssemblyVersionGitSha)' == '' ">$(GIT_COMMIT)</AssemblyVersionGitSha>
 
@@ -51,7 +51,7 @@
     Generate the assembly versioning attributes from the VERSIONS.txt file.
     ===================================================================================================================
   -->
-  <Target Name="_GenerateAssemblyVersionInfo" BeforeTargets="CoreCompile" Condition=" '$(SkipGenerateAssemblyVersionInfo)' != 'true' ">
+  <!--Target Name="_GenerateAssemblyVersionInfo" BeforeTargets="CoreCompile" Condition=" '$(SkipGenerateAssemblyVersionInfo)' != 'true' ">
     <PropertyGroup>
       <_VersionSourceFile>$(IntermediateOutputPath)\$(AssemblyName).Version.cs</_VersionSourceFile>
       <_VersionTxtFile>$(MSBuildThisFileDirectory)..\VERSIONS.txt</_VersionTxtFile>
@@ -75,7 +75,7 @@
       <FileWrites Include="$(_VersionSourceFile)" />
       <Compile Include="$(_VersionSourceFile)" />
     </ItemGroup>
-  </Target>
+  </Targe-->
 
   <!--
     ===================================================================================================================

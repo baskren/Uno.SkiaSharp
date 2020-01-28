@@ -1,13 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\..\source\SkiaSharp.Build.props" />
   <PropertyGroup>
-    <TargetFramework>uap10.0.10240</TargetFramework>
+    <!--TargetFramework>uap10.0.10240</TargetFramework-->
+    <ProjectGuid>{71A5987C-1B9E-4058-8547-3C85D6DE1749}</ProjectGuid>
     <OutputTypeEx>library</OutputTypeEx>
     <RootNamespace>SkiaSharp</RootNamespace>
     <AssemblyName>SkiaSharp</AssemblyName>
     <PackagingGroup>SkiaSharp</PackagingGroup>
-    <PackagingPlatform>uap10.0</PackagingPlatform>
+    <!--PackagingPlatform>uap10.0</PackagingPlatform-->
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <DefineConstants>$(DefineConstants);NET_STANDARD</DefineConstants>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

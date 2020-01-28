@@ -17,6 +17,7 @@ using Windows.Graphics.Display;
 using Xamarin.Forms.Platform.UWP;
 using SKNativeView = SkiaSharp.Views.UWP.SKXamlCanvas;
 using SKNativePaintSurfaceEventArgs = SkiaSharp.Views.UWP.SKPaintSurfaceEventArgs;
+using Uno.UI;
 #elif __MACOS__
 using Xamarin.Forms.Platform.MacOS;
 using SKNativeView = SkiaSharp.Views.Mac.SKCanvasView;
