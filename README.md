@@ -1,3 +1,8 @@
+# NOTE
+
+This is a fork of the [SkiaSharp for WebAssembly repo](https://github.com/unoplatform/Uno.SkiaSharp).  The intent of this fork is to facilitate a POC (proof of concept) of SkiaSharp + Xamarin.Forms running on the WebAssembly platform. 
+
+
 # SkiaSharp for WebAssembly
 
 SkiaSharp for WebAssembly is a SkiaSharp port that runs on top of the [Uno Platform](https://github.com/nventive/uno), using 
