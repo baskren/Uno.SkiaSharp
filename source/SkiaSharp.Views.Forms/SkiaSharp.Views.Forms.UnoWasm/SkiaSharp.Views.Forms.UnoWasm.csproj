@@ -5,19 +5,25 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <DefineConstants>$(DefineConstants);WINDOWS_UWP</DefineConstants>
-    <AssemblyName>SkiaSharp.Views.Forms</AssemblyName>
+    <AssemblyName>SkiaSharp.Views.Forms.UnoWasm</AssemblyName>
     <RootNamespace>SkiaSharp.Views.Forms</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <!--
     <Compile Include="..\SkiaSharp.Views.Forms.Shared\**\*.cs" Link="%(RecursiveDir)%(Filename)%(Extension)" />
+    -->
     <Compile Include="..\SkiaSharp.Views.Forms.Native.Shared\**\*.cs" Link="%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="..\SkiaSharp.Views.Forms.Native.Shared\Registrar.cs" />
+    <Compile Remove="..\SkiaSharp.Views.Forms.Native.Shared\SKGLViewRendererBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Uno.Xamarin.Forms.Platform" Version="4.3.4" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\binding\SkiaSharp.Wasm\SkiaSharp.Wasm.csproj" />
     <ProjectReference Include="..\..\SkiaSharp.Views\SkiaSharp.Views.UnoWasm\SkiaSharp.Views.UnoWasm.csproj" />
+    <ProjectReference Include="..\SkiaSharp.Views.Forms\SkiaSharp.Views.Forms.csproj" />
   </ItemGroup>
   <Import Project="..\..\SkiaSharp.Build.targets" />
   <Import Project="$(MSBuildSdkExtrasTargets)" Condition="Exists('$(MSBuildSdkExtrasTargets)')" />

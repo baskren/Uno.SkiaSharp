@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace SkiaSharp.Views.Forms
 {
-	[RenderWith(typeof(SKCanvasViewRenderer))]
+	[RenderWith(typeof(_SKCanvasViewRenderer))]
 	public partial class SKCanvasView : View, ISKCanvasViewController
 	{
 		public static readonly BindableProperty IgnorePixelScalingProperty =

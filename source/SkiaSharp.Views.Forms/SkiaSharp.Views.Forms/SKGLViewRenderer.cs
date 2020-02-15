@@ -1,6 +1,6 @@
 ﻿namespace SkiaSharp.Views.Forms
 {
-	internal class SKGLViewRenderer
+	internal class _SKGLViewRenderer
 	{
 	}
 }

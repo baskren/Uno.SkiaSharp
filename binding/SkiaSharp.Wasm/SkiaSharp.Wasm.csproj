@@ -8,7 +8,7 @@
 
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
-    <AssemblyName>SkiaSharp</AssemblyName>
+    <AssemblyName>SkiaSharp.Wasm</AssemblyName>
     <RootNamespace>SkiaSharp</RootNamespace>
     <PackageId>Uno.SkiaSharp.Wasm</PackageId>
 		<GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
@@ -24,9 +24,10 @@
 
   <ItemGroup>
     <UpToDateCheckInput Include="ts\**\*" />
-
+    <!--
     <Compile Include="..\Binding.Shared\**\*.cs" Link="Binding\%(RecursiveDir)%(Filename)%(Extension)" />
     <Compile Include="..\Binding\**\*.cs" Link="Binding\%(RecursiveDir)%(Filename)%(Extension)" />
+    -->
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +55,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="System.Memory" Version="4.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SkiaSharp.NetStandard\SkiaSharp.NetStandard.csproj" />
   </ItemGroup>
 
   <!-- 

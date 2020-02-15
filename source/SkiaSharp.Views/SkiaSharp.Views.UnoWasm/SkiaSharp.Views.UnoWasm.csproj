@@ -18,7 +18,7 @@
 
   <PropertyGroup>
     <DefineConstants>TRACE;__WASM__;WINDOWS_UWP</DefineConstants>
-    <AssemblyName>SkiaSharp.Views.UWP</AssemblyName>
+    <AssemblyName>SkiaSharp.Views.UnoWasm</AssemblyName>
     <RootNamespace>SkiaSharp.Views.UWP</RootNamespace>
   </PropertyGroup>
 

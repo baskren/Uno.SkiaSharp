@@ -14,3 +14,5 @@ using System.Resources;
 #else
 [assembly: AssemblyConfiguration("Release")]
 #endif
+
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("SkiaSharp.Views.Forms.UnoWasm")]
