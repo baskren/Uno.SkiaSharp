@@ -25,6 +25,8 @@
     <ProjectReference Include="..\..\SkiaSharp.Views\SkiaSharp.Views.UnoWasm\SkiaSharp.Views.UnoWasm.csproj" />
     <ProjectReference Include="..\SkiaSharp.Views.Forms\SkiaSharp.Views.Forms.csproj" />
   </ItemGroup>
+
+
   <Import Project="..\..\SkiaSharp.Build.targets" />
   <Import Project="$(MSBuildSdkExtrasTargets)" Condition="Exists('$(MSBuildSdkExtrasTargets)')" />
 

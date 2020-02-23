@@ -60,6 +60,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\binding\SkiaSharp.Wasm\SkiaSharp.Wasm.csproj" />
   </ItemGroup>
+
   
   <!-- 
   Adjust the items list generate by the microsoft.typescript.msbuild package.
